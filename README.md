@@ -8,9 +8,9 @@ This is a 10 Pin Bowling Score Calculator SPA build with Angular(14.2.5) and typ
 This solution can be used to score 10 pin bowling game. Below are the rules for Score calculation.
 1. A game consists of ten frames. Frame 1-9 are composed of two rolls. Frame 10 can be composed of up to three rolls depending on if the first rolls in the frame is a strike or a spare.
 2. Each frame can have one of three marks:
-    Strike: all 10 pins where knocked down with the first roll.
-    Spare: all 10 pins where knocked down using two rolls.
-    Open: some pins where left standing after the frame was completed.
+		Strike: all 10 pins where knocked down with the first roll.
+		Spare: all 10 pins where knocked down using two rolls.
+		Open: some pins where left standing after the frame was completed.
 3. When calculating the total score, the sum of the score for each frame is used.
     For an open frame the score is the total number of pins knocked down.
     For a strike, the score is 10 + the sum of the two rolls in the following frame.
