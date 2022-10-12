@@ -1,0 +1,42 @@
+<div class="bowling-game">
+    <h1> Ten Pin Bowling Game</h1>
+    <div class="final-score">The Final Score is <b>{{score}}</b></div>
+    <div class="frame-number" *ngIf="frameNumber < 11">Frame Number: <b>{{frameNumber}}</b></div>
+    <form (submit)="submitScore()">
+        <table *ngIf="frameNumber < 11">
+            <tr>
+                <th>First Roll</th>
+                <th *ngIf="formData.first < 10 || frameNumber === 10">Second Roll</th>
+                <th
+                    *ngIf="frameNumber === 10 && (formData.first === 10 || (formData.first + (this.formData.second ? this.formData.second : 0) === 10))">
+                    Third Roll</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="first" maxlength="2" min="0" max="10" required
+                        [(ngModel)]="formData.first" />
+                </td>
+                <td *ngIf="formData.first < 10 || frameNumber === 10">
+                    <input type="number" name="second" maxlength="2" min="0"
+                        max="{{(frameNumber === 10 && formData.first === 10) ? 10 : 10-formData.first}}"
+                        [(ngModel)]="formData.second" />
+                </td>
+
+                <td
+                    *ngIf="frameNumber === 10 && (formData.first === 10 || (formData.first + (this.formData.second ? this.formData.second : 0) === 10))">
+                    <input type="number" name="third" maxlength="2" min="0" max="10" [(ngModel)]="formData.third" />
+                </td>
+            </tr>
+
+        </table>
+        <div>
+            <button type="submit" *ngIf="frameNumber < 11">
+                Submit Score
+            </button>
+            <button type="reset" *ngIf="frameNumber === 11" onclick="location.reload();">
+                Reset Score
+            </button>
+        </div>
+        
+    </form>
+</div>

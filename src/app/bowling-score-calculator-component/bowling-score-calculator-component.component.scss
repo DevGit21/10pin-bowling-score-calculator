@@ -1,0 +1,41 @@
+$textcolor: rgb(39, 95, 218);
+$greenColor: rgb(106, 199, 179);
+
+.bowling-game{
+    font-size: 16px;
+    line-height: 25px;
+    h1{
+        color: $textcolor;
+    }
+
+    input{
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: 100px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+    table{
+        margin-bottom: 5px;
+        th{
+            text-align: left;
+        }
+    }
+
+    button{
+        background: $greenColor;
+        padding: 5px;
+        border: 1px solid $greenColor;
+        border-radius: 5px;
+    }
+    .frame-number{
+        margin-bottom: 5px;
+    }
+    .final-score{
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: $greenColor;
+        font-weight: 500;
+        
+    }
+}
