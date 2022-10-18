@@ -21,6 +21,6 @@ This solution can be used to score 10 pin bowling game. Below are the rules for 
 ## How to run
 Applicaion can be accessed on http://localhost:4200/. for this run command `ng serve` \
 For unit testing use command `ng test` \
-For code coverage details use command `ng test --code-coverage` \
+For code coverage details use command `ng test --code-coverage` 
 
 
